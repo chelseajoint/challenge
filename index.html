@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="src/styles/style.css"/>
+</head>
+
+<body>
+    <section class="form">
+        <div class="full-name">
+            <div class="name">
+                <label for="name" class="name__label">Nombre</label>
+                <input type="text" name="name" class="name__input" readonly>
+            </div>
+
+            <div class="surname">
+                <label for="surname" class="surname__label">Apellidos</label>
+                <input type="text" name="surname" class="surname__input" readonly>
+            </div>
+        </div>
+
+        <div class="contact-info">
+            <div class="email">
+                <label for="email" class="email__label">Email</label>
+                <input type="email" name="email" class="email__input" readonly>
+            </div>
+
+            <div class="phone">
+                <label for="phone" class="phone__label">Tel&eacute;fono</label>
+                <input type="tel" name="phone" class="phone__input">
+            </div>
+        </div>
+
+        <div class="age">
+            <label for="age" class="age__label">Edad</label>
+            <input type="number" name="age" class="age__input">
+        </div>
+
+        <div class="loan">
+            <label for="loan-amount" class="loan__label">Importe pr&eacute;stamo (10 - 1000)</label>
+            <div class="loan-amount">
+                <input type="number" name="loan-amount" class="loan-amount__input">
+                <select name="coin" class="coin-select">
+                    <option value="seleccionar" class="coin-select__value">&#45;</option>
+                    <option value="&#8364;" class="coin-select__value">&#8364;</option>
+                    <option value="&#36;" class="coin-select__value">&#36;</option>
+                    <option value="&#163;" class="coin-select__value">&#163;</option>
+                    <option value="&#165;" class="coin-select__value">&#165;</option>
+                    <option value="&#8361;" class="coin-select__value">&#8361;</option>
+                </select>
+            </div>
+        </div>
+       
+        <div class="loan-time">
+            <div class="loan-date">
+                <label for="loan-date" class="loan-date__label">Fecha a conseguir<br>el pr&eacute;stamo</label>
+                <input type="date" name="loan-date" class="loan-date__input">
+            </div>
+            
+            <div class="loan-weeks">
+                <label for="loan-weeks" class="loan-weeks__label">Tiempo a devoler<br>(a&ntilde;os)</label>
+                <select name="loan-weeks" class="loan-weeks-select" value="seleciona">
+                    <option value="seleccionar" class="loan-weeks-select__value">&#45;&#45;</option>
+                    <option value="1" class="loan-weeks-select__value">1</option>
+                    <option value="2" class="loan-weeks-select__value">2</option>
+                    <option value="3" class="loan-weeks-select__value">3</option>
+                    <option value="4" class="loan-weeks-select__value">4</option>
+                    <option value="5" class="loan-weeks-select__value">5</option>
+                    <option value="6" class="loan-weeks-select__value">6</option>
+                    <option value="7" class="loan-weeks-select__value">7</option>
+                    <option value="8" class="loan-weeks-select__value">8</option>
+                    <option value="9" class="loan-weeks-select__value">9</option>
+                    <option value="10" class="loan-weeks-select__value">10</option>
+                    <option value="11" class="loan-weeks-select__value">11</option>
+                    <option value="12" class="loan-weeks-select__value">12</option>
+                    <option value="13" class="loan-weeks-select__value">13</option>
+                    <option value="14" class="loan-weeks-select__value">14</option>
+                    <option value="15" class="loan-weeks-select__value">15</option>
+                    <option value="16" class="loan-weeks-select__value">16</option>
+                    <option value="17" class="loan-weeks-select__value">17</option>
+                    <option value="18" class="loan-weeks-select__value">18</option>
+                    <option value="19" class="loan-weeks-select__value">19</option>
+                    <option value="20" class="loan-weeks-select__value">20</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="check">
+            <input type="checkbox" value="checkbox" class="check__input">
+            <label for="checkbox" class="check__label"><a href="https://cloudframework.io/terminos-y-condiciones/" target="_blank">Aceptar t&eacute;rnimos y condiciones</a></label>
+        </div>
+        
+        <button class="cta">Enviar solicitud</button>
+
+        <div class="info"></div>
+  
+    </section>
+
+    <script src="src/index.js"></script>
+</body>
+
+</html>

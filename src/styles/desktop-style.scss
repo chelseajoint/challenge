@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@400;600&display=swap');
+
+$base-pink: #ffeae6;
+$base-orange: #ffbcac;
+$base-blue: #001f49;
+$base-blue-hover: #154a8a;
+$base-white: white;
+$base-width: 206px;
+$base-height: 24px;
+$base-border: solid 2px $base-orange;
+$base-title: 16px;
+$base-subtitle: 13px;
+$base-margin: 0 0 10px 0;
+$base-padding: 3px 0 1px 2px;
+$base-font-weight-title: 600;
+$base-font-weight-subtitle: 400;
+$base-font-family: 'Epilogue', sans-serif;
+$font-response: 14px;
+
+@mixin form {
+    border-radius: 4px;
+    font-size: $base-subtitle;
+}
+
+@mixin form-focus {
+    outline: none;
+    border-color: $base-blue;
+}
+
+.form{
+    width: 420px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: $base-pink;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+label{
+    font-family: $base-font-family;
+    font-size: $base-title;
+    font-weight: $base-font-weight-title;
+    color: $base-blue;
+    margin: 0 0 5px 0;
+}
+
+input{
+    @include form;
+    font-family: $base-font-family;
+    font-weight: $base-font-weight-subtitle;
+    padding: $base-padding;
+    border: $base-border;
+    width: 200px;
+    height: 17px;
+    color: $base-blue;
+    margin: $base-margin;
+
+    &:focus{
+        @include form-focus;
+    }
+
+    &[type=number] {
+        -moz-appearance: textfield;
+        appearance: textfield;
+
+        &::-webkit-inner-spin-button,
+        &::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        }
+    }
+
+    &:required {
+        border-color: red;
+    }
+}
+
+select{
+    @include form;
+    appearance: listbox;
+    font-family: $base-font-family;
+    font-weight: $base-font-weight-subtitle;
+    padding: $base-padding;
+    background-color: $base-white;
+    width: $base-width;
+    height: $base-height;
+    border: $base-border;
+    color: $base-blue;
+    margin: $base-margin;
+
+    &:focus{
+        @include form-focus
+    }
+
+    &:required {
+        border-color: red;
+    }
+}
+
+.cta{
+    @include form;
+    font-family: $base-font-family;
+    font-weight: $base-font-weight-title;
+    padding: 2px 0 1px 0; 
+    background-color: $base-blue;
+    width: $base-width;
+    height: $base-height;
+    color: $base-white;
+    border: 0;
+    margin: 0;
+    cursor: pointer;
+
+    &:hover{
+        background-color: $base-blue-hover;
+    }
+}
+
+div{
+    display: flex;
+    flex-direction: column;
+}
+
+.full-name, .contact-info, .loan-amount, .loan-time, .check{
+    flex-direction: initial;
+    justify-content: space-between;
+}
+
+.name__input, .surname__input, .email__input{
+    background-color: $base-pink;
+    cursor: default;
+
+    &:focus{
+        border-color: $base-orange;
+    }
+}
+
+.check{
+    margin-top: 20px;
+    justify-content: flex-start;
+
+    &__input{
+        -webkit-appearance: none;
+        appearance: none;
+        background-color: $base-white;
+        font: inherit;
+        width: 16px;
+        height: 16px;
+        display: grid;
+        place-content: center;
+        padding: 0;
+        font-size: 12px;
+    
+        &::before {
+            content: "✔";
+            opacity: 0;
+        }
+        
+        &:checked::before {
+            opacity: 1;
+        }
+    }
+
+    &__label{
+        margin: -1px 0 0 5px;
+        font-weight: $base-font-weight-subtitle;
+    
+        a{
+            color: $base-blue;
+            font-size: $base-subtitle;
+        
+            &:hover{
+                color: $base-blue-hover;
+            }
+        }
+    }
+}
+
+.info{
+    font-family: $base-font-family;
+    font-weight: $base-font-weight-subtitle;
+    font-size: $base-subtitle;
+    margin: 10px 0 0 0;
+    color: red;
+}
+
+.response{
+    font-family: $base-font-family;
+    font-weight: $base-font-weight-title;
+    align-items: center;
+    color: $base-blue;
+
+    .thanks{
+        font-size: 25px;
+        margin-bottom: 10px;
+    }
+
+    .data{
+        font-size: $font-response;
+        margin-bottom: 5px;
+    }
+
+    .contacto{
+        font-size: $font-response;
+        margin-top: 15px;
+    }
+
+    ul{
+        display: contents;
+        list-style: none;
+        line-height: 16px;
+        font-weight: $base-font-weight-subtitle;
+        font-size: $base-subtitle;
+    }
+}
